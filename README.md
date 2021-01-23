@@ -41,7 +41,13 @@ cd tree-match
 npm i
 ```
 
-4. Deploy the app on a [local web server](https://webpack.js.org/configuration/dev-server/) in development mode.
+4. Create a .env file at the root of the project directory with the following contents.
+
+```
+REACT_APP_BASE_API_URL=##############################################
+```
+
+5. Deploy the app on a [local web server](https://webpack.js.org/configuration/dev-server/) in development mode.
 
 ```
 npm start
