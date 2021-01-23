@@ -1,0 +1,23 @@
+.Questions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px 20px;
+}
+
+.question_text {
+  margin-bottom: 30px;
+}
+
+.question_answers_row {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 10px;
+}
+
+.question_answers_grid {
+  grid-template-columns: auto auto;
+  row-gap: 10px;
+}

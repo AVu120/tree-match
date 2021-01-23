@@ -1,0 +1,32 @@
+html,
+body {
+  /* height: 100%; */
+  /* margin: 0px; */
+  /* padding: 0px; */
+}
+
+body {
+  background-image: url("./images/kids-planting-tree-trimmed.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 20px;
+}
+
+.window {
+  border: 5px double #184655;
+  background-color: white;
+}
+
+.wallpaper_attribution {
+  position: absolute;
+  bottom: 15px;
+  color: black;
+}
