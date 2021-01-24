@@ -5,8 +5,9 @@
 - [About](#about)
 - [Built With](#built-with)
 - [Prerequisites](#prerequisites)
-- [How to Build and Run the App](#how-to-build-and-run-the-app)
-- [Accessing the Application](#accessing-the-application)
+- [How to Build the App](#how-to-build-the-app)
+- [How to Run the App](#how-to-run-the-app)
+- [How to Test the App](#how-to-test-the-app)
 
 ## About
 
@@ -21,7 +22,7 @@ A service/app that tells you what kind of tree you should plant in your garden! 
 - [Node](https://nodejs.org/en/) with npm included.
 - [Git](https://git-scm.com/)
 
-## How to Build and Run the App
+## How to Build the App
 
 1. Clone the project source code.
 
@@ -53,6 +54,14 @@ REACT_APP_BASE_API_URL=##############################################
 npm start
 ```
 
-## Accessing the Application
+## How to Run the App
 
-1. Enter localhost:3000 into any web-browser.
+1. Enter localhost:3000 into the url bar of any web-browser.
+
+## How to Test the App
+
+Start the Jest test runner in watch mode.
+
+```
+npm test
+```

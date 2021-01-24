@@ -3,14 +3,6 @@ import Question from "./Question";
 
 const mockSetData = jest.fn();
 
-test("Question component fully renders", () => {
-  const mockData = { question: null, match: null };
-  render(<Question data={mockData} setData={mockSetData} />);
-
-  const title = screen.getByText(/Question 0/i);
-  expect(title).toBeInTheDocument();
-});
-
 test("Question text and buttons render after receiving first api response", () => {
   const mockData = {
     question: {
