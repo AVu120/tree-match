@@ -2,6 +2,7 @@ import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import * as standardColors from "../../utilities/standard-colors";
 import css from "./Introduction.module.css";
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -35,6 +36,10 @@ const Introduction = ({ setShownSection }) => {
       </Button>
     </div>
   );
+};
+
+Introduction.propTypes = {
+  setShownSection: PropTypes.func,
 };
 
 export default Introduction;

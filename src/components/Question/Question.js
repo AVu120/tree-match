@@ -6,6 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { useEffect, useState } from "react";
 import * as standardColors from "../../utilities/standard-colors";
 import css from "./Question.module.css";
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -81,8 +82,13 @@ const Question = ({ data, setData }) => {
               onChange={(event) => answerQuestion(stepId, event.target.value)}
               variant="outlined"
             >
-              {answers.map((answer) => (
-                <MenuItem value={answer}>{answer}</MenuItem>
+              {answers.map((answer, index) => (
+                <MenuItem
+                  key={`Question ${questionCount} Answer ${index + 1}`}
+                  value={answer}
+                >
+                  {answer}
+                </MenuItem>
               ))}
             </Select>
           )}
@@ -94,6 +100,11 @@ const Question = ({ data, setData }) => {
       )}
     </div>
   );
+};
+
+Question.propTypes = {
+  data: PropTypes.object,
+  setData: PropTypes.func,
 };
 
 export default Question;

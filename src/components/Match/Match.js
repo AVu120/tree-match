@@ -2,6 +2,7 @@ import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import * as standardColors from "../../utilities/standard-colors";
 import css from "./Match.module.css";
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -34,6 +35,11 @@ const Match = ({ data, setShownSection }) => {
       </Button>
     </div>
   );
+};
+
+Match.propTypes = {
+  data: PropTypes.object,
+  setShownSection: PropTypes.func,
 };
 
 export default Match;
