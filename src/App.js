@@ -15,13 +15,7 @@ function App() {
       case "questions":
         return <Questions data={data} setData={setData} />;
       default:
-        return (
-          <Match
-            data={data}
-            setData={setData}
-            setShownSection={setShownSection}
-          />
-        );
+        return <Match data={data} setShownSection={setShownSection} />;
     }
   };
 

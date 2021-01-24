@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Match = ({ data, setData, setShownSection }) => {
+const Match = ({ data, setShownSection }) => {
   const classes = useStyles();
   return (
     <div className={css.Match}>
