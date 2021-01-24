@@ -5,20 +5,21 @@ import Introduction from "./components/Introduction/Introduction";
 import Questions from "./components/Question/Question";
 
 function App() {
-  const [shownSection, setShownSection] = useState("introduction"); // 3 sections in total: introduction, questions and match.
+  const [shownSection, setShownSection] = useState("introduction"); // 3 sections in total: introduction, question and match.
   const [data, setData] = useState({ question: null, match: null });
 
   const toggleSection = (section) => {
     switch (section) {
       case "introduction":
         return <Introduction setShownSection={setShownSection} />;
-      case "questions":
+      case "question":
         return <Questions data={data} setData={setData} />;
       default:
         return <Match data={data} setShownSection={setShownSection} />;
     }
   };
 
+  // Show match component when a match is detected in the api response.
   useEffect(() => {
     if (!data.match) return;
     setShownSection("match");

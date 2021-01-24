@@ -22,12 +22,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Question = ({ data, setData }) => {
-  const [questionCount, setQuestionCount] = useState(0);
   const classes = useStyles();
+  const [questionCount, setQuestionCount] = useState(0);
   const stepId = data.question?.step_id;
   const answers = data.question?.answers;
   const numberOfAnswers = data.question?.answers?.length;
 
+  // Send answer data to api which replies with another question data or match data.
   const answerQuestion = (step_id, answer) => {
     fetch(`${process.env.REACT_APP_BASE_API_URL}/answer`, {
       method: "post",
@@ -37,6 +38,7 @@ const Question = ({ data, setData }) => {
       .then((res) => setData(res));
   };
 
+  // Retrieve first question data from api on load.
   useEffect(() => {
     fetch(`${process.env.REACT_APP_BASE_API_URL}/begin`)
       .then((res) => res.json())
@@ -44,16 +46,17 @@ const Question = ({ data, setData }) => {
     // eslint-disable-next-line
   }, []);
 
+  // Increment question number after receiving new question data in api response.
   useEffect(() => {
     if (!data.question) return;
     setQuestionCount((state) => state + 1);
   }, [stepId]);
 
   return (
-    <div className={css.Questions}>
-      <h1>{`Question ${questionCount}`}</h1>
+    <div className={css.Question}>
       {data.question ? (
         <>
+          <h1>{`Question ${questionCount}`}</h1>
           <h2 className={css.question_text}>{data.question?.question}</h2>
           {numberOfAnswers < 5 ? (
             <div
@@ -84,7 +87,9 @@ const Question = ({ data, setData }) => {
           )}
         </>
       ) : (
-        <CircularProgress color="secondary" />
+        <CircularProgress
+          style={{ color: standardColors.LEAFY_GREEN, marginTop: "20px" }}
+        />
       )}
     </div>
   );

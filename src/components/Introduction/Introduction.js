@@ -28,7 +28,7 @@ const Introduction = ({ setShownSection }) => {
       </h2>
       <Button
         variant="contained"
-        onClick={() => setShownSection("questions")}
+        onClick={() => setShownSection("question")}
         className={classes.button}
       >
         Start

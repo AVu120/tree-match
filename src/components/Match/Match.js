@@ -27,7 +27,7 @@ const Match = ({ data, setShownSection }) => {
       >{`You should plant a ${data.match.name}. ${data.match.description}`}</h2>
       <Button
         variant="contained"
-        onClick={() => setShownSection("questions")}
+        onClick={() => setShownSection("question")}
         className={classes.button}
       >
         Restart
