@@ -36,3 +36,9 @@ code {
   color: black;
   text-decoration: none;
 }
+
+@media screen and (max-height: 520px) {
+  .wallpaper_attribution {
+    display: none;
+  }
+}
