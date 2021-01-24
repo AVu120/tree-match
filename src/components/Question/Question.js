@@ -50,6 +50,7 @@ const Question = ({ data, setData }) => {
   useEffect(() => {
     if (!data.question) return;
     setQuestionCount((state) => state + 1);
+    // eslint-disable-next-line
   }, [stepId]);
 
   return (
