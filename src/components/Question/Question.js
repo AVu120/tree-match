@@ -5,7 +5,7 @@ import Select from "@material-ui/core/Select";
 import { makeStyles } from "@material-ui/core/styles";
 import { useEffect, useState } from "react";
 import * as standardColors from "../../utilities/standard-colors";
-import css from "./Questions.module.css";
+import css from "./Question.module.css";
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Questions = ({ data, setData }) => {
+const Question = ({ data, setData }) => {
   const [questionCount, setQuestionCount] = useState(0);
   const classes = useStyles();
   const stepId = data.question?.step_id;
@@ -90,4 +90,4 @@ const Questions = ({ data, setData }) => {
   );
 };
 
-export default Questions;
+export default Question;

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Match from "./components/Match/Match";
 import Introduction from "./components/Introduction/Introduction";
-import Questions from "./components/Questions/Questions";
+import Questions from "./components/Question/Question";
 
 function App() {
   const [shownSection, setShownSection] = useState("introduction"); // 3 sections in total: introduction, questions and match.
