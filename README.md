@@ -56,6 +56,10 @@ npm i
 REACT_APP_BASE_API_URL=##############################################
 ```
 
+Note: Currently I am using a private external api endpoint locally of which I do not have permission to publicize here. I may just build an identical/similiar api for this and deploy it in a backend with the frontend later (e.g. on Heroku).
+
+Until then, you'll need to create your own api server to supply questions & answers to the client.
+
 5. Deploy the app on a [local web server](https://webpack.js.org/configuration/dev-server/) in development mode.
 
 ```
