@@ -1,8 +1,7 @@
 var express = require("express");
-var router = express.Router();
-
-router.get("/", function (req, res, next) {
-  res.render("index", { title: "Express" });
-});
-
-module.exports = router;
+var rootRouter = express.Router();
+var beginRouter = require("./begin");
+var answersRouter = require("./answers");
+rootRouter.use("/begin", beginRouter);
+rootRouter.use("/answers", answersRouter);
+module.exports = rootRouter;
