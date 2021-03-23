@@ -1,3 +1,4 @@
+"use strict";
 var express = require("express");
 var rootRouter = express.Router();
 var beginRouter = require("./begin");

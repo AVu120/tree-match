@@ -1,4 +1,4 @@
-export const beginQuiz = (req, res, next) => {
+export const beginQuiz = (req: any, res: any, next: any) => {
   res.send({
     question: {
       step_id: 1,

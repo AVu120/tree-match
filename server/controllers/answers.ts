@@ -29,7 +29,7 @@ const answerQuestion1 = (answer: string) => {
     };
 };
 
-export const answerQuestion = (req, res, next) => {
+export const answerQuestion = (req: any, res: any, next: any) => {
   const { step_id, answer } = req.body;
   switch (step_id) {
     case "1":
