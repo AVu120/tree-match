@@ -31,8 +31,11 @@ const Question = ({ data, setData }) => {
 
   // Send answer data to api which replies with another question data or match data.
   const answerQuestion = (step_id, answer) => {
-    fetch(`${process.env.REACT_APP_BASE_API_URL}/answer`, {
+    fetch(`${process.env.REACT_APP_BASE_API_URL}/answers`, {
       method: "post",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({ step_id, answer }),
     })
       .then((res) => res.json())

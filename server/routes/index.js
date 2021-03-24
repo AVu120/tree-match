@@ -1,8 +1,10 @@
 "use strict";
 var express = require("express");
+var cors = require("cors");
 var rootRouter = express.Router();
 var beginRouter = require("./begin");
 var answersRouter = require("./answers");
+rootRouter.use(cors());
 rootRouter.use("/begin", beginRouter);
 rootRouter.use("/answers", answersRouter);
 module.exports = rootRouter;
