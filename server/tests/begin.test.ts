@@ -1,6 +1,17 @@
 const request = require("supertest");
 const app = require("../app");
 
+interface IResponseBody {
+  body: {
+    question: {
+      step_id: number;
+      question: string;
+      answers: string[];
+    } | null;
+    match: { name: string; description: string } | null;
+  };
+}
+
 describe("Begin quiz", () => {
   test("GET /begin", async () => {
     const expectedResponseBody = {
@@ -15,8 +26,10 @@ describe("Begin quiz", () => {
     await request(app)
       .get("/api/begin")
       .expect(200)
-      .then((res) => {
+      .then((res: IResponseBody) => {
         expect(res.body).toEqual(expectedResponseBody);
       });
   });
 });
+
+export {};
