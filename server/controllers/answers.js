@@ -20,6 +20,7 @@ var answerQuestion1 = function (answer) {
             },
             match: null,
         };
+    // if (answer === "farm")
     else
         return {
             question: {
@@ -40,12 +41,13 @@ var answerQuestion2 = function (answer) {
             },
             match: null,
         };
+    // if (answer === "no")
     else
         return {
             question: {
                 step_id: 4,
                 question: "How much do you like sweeping the courtyard?",
-                answers: ["not at all", "serisouly no I'm not playing here"],
+                answers: ["not at all", "seriously no I'm not playing here"],
             },
             match: null,
         };
@@ -59,6 +61,7 @@ var answerQuestion3 = function (answer) {
                 description: "A small tree that's great for courtyards, from which leaves can be picked and added to any curry!",
             },
         };
+    // if (answer === "no")
     else
         return {
             question: null,
@@ -77,6 +80,7 @@ var answerQuestion4 = function (answer) {
                 description: "The marker of any gentrified inner-Sydney suburb. You'll have beautiful flowers all summer long!",
             },
         };
+    // if (answer === "seriously no I'm not playing here")
     else
         return {
             question: null,
@@ -96,6 +100,7 @@ var answerQuestion5 = function (answer) {
             },
             match: null,
         };
+    // if (answer === "no")
     else
         return {
             question: null,
@@ -148,6 +153,7 @@ var answerQuestion6 = function (answer) {
             },
             match: null,
         };
+    // if (parseInt(answer) === 10)
     else
         return {
             question: null,
@@ -166,38 +172,13 @@ var answerQuestion7 = function (answer) {
                 description: "King of fruits, fruit of kings! Feijoas are the best fruit.",
             },
         };
+    // if (answer === "no")
     else
         return {
             question: null,
             match: {
                 name: "Orange tree",
                 description: "Is the fruit named for the colour or the colour named for the fruit?",
-            },
-        };
-};
-var answerQuestion11 = function (answer) {
-    if (answer === "none")
-        return {
-            question: null,
-            match: {
-                name: "Walnut tree",
-                description: "A nut shaped like a miniature brain grows from this tree!",
-            },
-        };
-    if (answer === "some")
-        return {
-            question: null,
-            match: {
-                name: "Hazel",
-                description: "Used for nutella and salads, and even known to habour truffles on the roots!",
-            },
-        };
-    else
-        return {
-            question: null,
-            match: {
-                name: "Oak",
-                description: "The acorns are a tasty treat for pigs, and truffles can be grown on the roots!",
             },
         };
 };
@@ -211,6 +192,7 @@ var answerQuestion8 = function (answer) {
             },
             match: null,
         };
+    // (answer === "no")
     else
         return {
             question: {
@@ -230,12 +212,80 @@ var answerQuestion9 = function (answer) {
                 description: "King of fruits, fruit of kings! Feijoas are the best fruit.",
             },
         };
+    // if (answer === "no")
     else
         return {
             question: null,
             match: {
                 name: "Apple tree",
                 description: "The most basic and popular fruit tree!",
+            },
+        };
+};
+var answerQuestion10 = function (answer) {
+    if (answer === "yes")
+        return {
+            question: {
+                step_id: 11,
+                question: "How many pigs do you own?",
+                answers: ["none", "some", "heaps"],
+            },
+            match: null,
+        };
+    // if (answer === "no")
+    else
+        return {
+            question: {
+                step_id: 12,
+                question: "Is there a river on your property?",
+                answers: ["yes", "no"],
+            },
+            match: null,
+        };
+};
+var answerQuestion11 = function (answer) {
+    if (answer === "none")
+        return {
+            question: null,
+            match: {
+                name: "Walnut tree",
+                description: "A nut shaped like a miniature brain grows from this tree!",
+            },
+        };
+    if (answer === "some")
+        return {
+            question: null,
+            match: {
+                name: "Hazel",
+                description: "Used for nutella and salads, and even known to habour truffles on the roots!",
+            },
+        };
+    // if (answer === "heaps")
+    else
+        return {
+            question: null,
+            match: {
+                name: "Oak",
+                description: "The acorns are a tasty treat for pigs, and truffles can be grown on the roots!",
+            },
+        };
+};
+var answerQuestion12 = function (answer) {
+    if (answer === "yes")
+        return {
+            question: null,
+            match: {
+                name: "Willow",
+                description: "A mysterious tree that loves water, mist, and witches.",
+            },
+        };
+    // if (answer === "no")
+    else
+        return {
+            question: null,
+            match: {
+                name: "Birch",
+                description: "A bland pretty tree, suitable for someone who says no to everything!",
             },
         };
 };
@@ -260,8 +310,12 @@ var answerQuestion = function (req, res, next) {
             return res.send(answerQuestion8(answer));
         case 9:
             return res.send(answerQuestion9(answer));
+        case 10:
+            return res.send(answerQuestion10(answer));
         case 11:
             return res.send(answerQuestion11(answer));
+        case 12:
+            return res.send(answerQuestion12(answer));
     }
 };
 exports.answerQuestion = answerQuestion;

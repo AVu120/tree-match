@@ -22,6 +22,7 @@ const answerQuestion1 = (answer: string) => {
       },
       match: null,
     };
+  // if (answer === "farm")
   else
     return {
       question: {
@@ -43,12 +44,13 @@ const answerQuestion2 = (answer: string) => {
       },
       match: null,
     };
+  // if (answer === "no")
   else
     return {
       question: {
         step_id: 4,
         question: "How much do you like sweeping the courtyard?",
-        answers: ["not at all", "serisouly no I'm not playing here"],
+        answers: ["not at all", "seriously no I'm not playing here"],
       },
       match: null,
     };
@@ -64,6 +66,7 @@ const answerQuestion3 = (answer: string) => {
           "A small tree that's great for courtyards, from which leaves can be picked and added to any curry!",
       },
     };
+  // if (answer === "no")
   else
     return {
       question: null,
@@ -85,6 +88,7 @@ const answerQuestion4 = (answer: string) => {
           "The marker of any gentrified inner-Sydney suburb. You'll have beautiful flowers all summer long!",
       },
     };
+  // if (answer === "seriously no I'm not playing here")
   else
     return {
       question: null,
@@ -106,6 +110,7 @@ const answerQuestion5 = (answer: string) => {
       },
       match: null,
     };
+  // if (answer === "no")
   else
     return {
       question: null,
@@ -162,6 +167,7 @@ const answerQuestion6 = (answer: string) => {
       },
       match: null,
     };
+  // if (parseInt(answer) === 10)
   else
     return {
       question: null,
@@ -182,6 +188,7 @@ const answerQuestion7 = (answer: string) => {
           "King of fruits, fruit of kings! Feijoas are the best fruit.",
       },
     };
+  // if (answer === "no")
   else
     return {
       question: null,
@@ -190,6 +197,71 @@ const answerQuestion7 = (answer: string) => {
         description:
           "Is the fruit named for the colour or the colour named for the fruit?",
       },
+    };
+};
+
+const answerQuestion8 = (answer: string) => {
+  if (answer === "yes")
+    return {
+      question: {
+        step_id: 9,
+        question: "Are you an awesome cool person?",
+        answers: ["yes", "no"],
+      },
+      match: null,
+    };
+  // (answer === "no")
+  else
+    return {
+      question: {
+        step_id: 10,
+        question: "Do you like cooking?",
+        answers: ["yes", "no"],
+      },
+      match: null,
+    };
+};
+
+const answerQuestion9 = (answer: string) => {
+  if (answer === "yes")
+    return {
+      question: null,
+      match: {
+        name: "Feijoa tree",
+        description:
+          "King of fruits, fruit of kings! Feijoas are the best fruit.",
+      },
+    };
+  // if (answer === "no")
+  else
+    return {
+      question: null,
+      match: {
+        name: "Apple tree",
+        description: "The most basic and popular fruit tree!",
+      },
+    };
+};
+
+const answerQuestion10 = (answer: string) => {
+  if (answer === "yes")
+    return {
+      question: {
+        step_id: 11,
+        question: "How many pigs do you own?",
+        answers: ["none", "some", "heaps"],
+      },
+      match: null,
+    };
+  // if (answer === "no")
+  else
+    return {
+      question: {
+        step_id: 12,
+        question: "Is there a river on your property?",
+        answers: ["yes", "no"],
+      },
+      match: null,
     };
 };
 
@@ -212,6 +284,7 @@ const answerQuestion11 = (answer: string) => {
           "Used for nutella and salads, and even known to habour truffles on the roots!",
       },
     };
+  // if (answer === "heaps")
   else
     return {
       question: null,
@@ -223,43 +296,23 @@ const answerQuestion11 = (answer: string) => {
     };
 };
 
-const answerQuestion8 = (answer: string) => {
-  if (answer === "yes")
-    return {
-      question: {
-        step_id: 9,
-        question: "Are you an awesome cool person?",
-        answers: ["yes", "no"],
-      },
-      match: null,
-    };
-  else
-    return {
-      question: {
-        step_id: 10,
-        question: "Do you like cooking?",
-        answers: ["yes", "no"],
-      },
-      match: null,
-    };
-};
-
-const answerQuestion9 = (answer: string) => {
+const answerQuestion12 = (answer: string) => {
   if (answer === "yes")
     return {
       question: null,
       match: {
-        name: "Feijoa tree",
+        name: "Willow",
+        description: "A mysterious tree that loves water, mist, and witches.",
+      },
+    };
+  // if (answer === "no")
+  else
+    return {
+      question: null,
+      match: {
+        name: "Birch",
         description:
-          "King of fruits, fruit of kings! Feijoas are the best fruit.",
-      },
-    };
-  else
-    return {
-      question: null,
-      match: {
-        name: "Apple tree",
-        description: "The most basic and popular fruit tree!",
+          "A bland pretty tree, suitable for someone who says no to everything!",
       },
     };
 };
@@ -285,7 +338,11 @@ export const answerQuestion = (req: any, res: any, next: any) => {
       return res.send(answerQuestion8(answer));
     case 9:
       return res.send(answerQuestion9(answer));
+    case 10:
+      return res.send(answerQuestion10(answer));
     case 11:
       return res.send(answerQuestion11(answer));
+    case 12:
+      return res.send(answerQuestion12(answer));
   }
 };
