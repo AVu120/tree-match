@@ -22,8 +22,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const API_SERVER_URL = `http://localhost:${process.env.PORT}/api`;
-
 const Question = ({ data, setData }) => {
   const classes = useStyles();
   const [questionCount, setQuestionCount] = useState(0);
@@ -33,7 +31,7 @@ const Question = ({ data, setData }) => {
 
   // Send answer data to api which replies with another question data or match data.
   const answerQuestion = (step_id, answer) => {
-    fetch(`${API_SERVER_URL}/answers`, {
+    fetch(`/answers`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -46,7 +44,7 @@ const Question = ({ data, setData }) => {
 
   // Retrieve first question data from api on load.
   useEffect(() => {
-    fetch(`${API_SERVER_URL}/begin`)
+    fetch(`/begin`)
       .then((res) => res.json())
       .then((res) => setData(res));
     // eslint-disable-next-line
