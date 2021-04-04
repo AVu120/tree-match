@@ -33,7 +33,7 @@ const Question = ({ data, setData }) => {
 
   // Send answer data to api which replies with another question data or match data.
   const answerQuestion = (step_id, answer) => {
-    fetch(`${process.env.API_SERVER_URL}/answers`, {
+    fetch(`${API_SERVER_URL}/answers`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -46,7 +46,7 @@ const Question = ({ data, setData }) => {
 
   // Retrieve first question data from api on load.
   useEffect(() => {
-    fetch(`${process.env.API_SERVER_URL}/begin`)
+    fetch(`${API_SERVER_URL}/begin`)
       .then((res) => res.json())
       .then((res) => setData(res));
     // eslint-disable-next-line
