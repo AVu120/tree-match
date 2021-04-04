@@ -1,0 +1,20 @@
+{
+  "name": "tree-match",
+  "version": "1.0.0",
+  "description": "Helps you decide what type of tree to plant.",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd client && npm i && npm run build",
+    "start": "cd server && npm i && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AVu120/tree-match.git"
+  },
+  "author": "Anthony Hien Vu <AVu120@gmail.com> (https://avu120.github.io/portfolio/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AVu120/tree-match/issues"
+  },
+  "homepage": "https://github.com/AVu120/tree-match#readme"
+}
