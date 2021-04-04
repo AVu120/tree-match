@@ -1,36 +1,35 @@
 <h1 align="center">TreeMatch</h1>
 
+A service that tells you what kind of tree you should plant in your garden! It guides users through a questionnaire and matches them with a tree species.
+
+Click [here](https://tree-match.herokuapp.com/) to play with a demo of the app.
+
 ![image](https://user-images.githubusercontent.com/38395166/106522015-2eedb580-6533-11eb-81f9-dcffde5d2910.png)
-
-## Table of Contents
-
-- [About](#about)
-- [Built With](#built-with)
-- [Prerequisites](#prerequisites)
-- [How to Build the App](#how-to-build-the-app)
-- [How to Run the App](#how-to-run-the-app)
-- [How to Test the App](#how-to-test-the-app)
-
-## About
-
-A service/app that tells you what kind of tree you should plant in your garden! It guides users through a questionnaire and matches them with a tree species.
 
 ![image](https://user-images.githubusercontent.com/38395166/106522145-58a6dc80-6533-11eb-9a1e-bed394903e98.png)
 
 ![image](https://user-images.githubusercontent.com/38395166/106522196-6b211600-6533-11eb-81ae-476ada02525d.png)
 
 ![image](https://user-images.githubusercontent.com/38395166/106522240-7f651300-6533-11eb-8fa5-9ff1c8a15ef7.png)
+<br/>
+
+## Table of Contents
+
+- [Built With](#built-with)
+- [Prerequisites](#prerequisites)
+- [How to Build the App](#how-to-build-the-app)
+- [How to Run the App](#how-to-run-the-app)
+- [How to Test the App](#how-to-test-the-app)
+  <br/>
 
 ## Built With
 
 - [React](https://reactjs.org/)
-
-## Prerequisites
-
 - [Node](https://nodejs.org/en/) with npm included.
-- [Git](https://git-scm.com/)
+- [Express](https://expressjs.com/)
+  <br/>
 
-## How to Build the App
+## Getting Started
 
 1. Clone the project source code.
 
@@ -44,36 +43,78 @@ git clone https://github.com/AVu120/tree-match.git
 cd tree-match
 ```
 
-3. Install all dependencies.
+<br/>
+
+## How to Build & Run the App Locally
+
+1. Ensure you're on the main or dev branch.
 
 ```
+git checkout main
+```
+
+OR
+
+```
+git checkout dev
+```
+
+2. Start the frontend running on a webpack dev server.
+
+```
+cd client
 npm i
+npm start
 ```
 
-4. Create a .env file at the root of the project directory with the following contents.
+3. Start the backend/api-server.
 
 ```
-REACT_APP_BASE_API_URL=##############################################
+cd ../server
+npm i
+npm start
 ```
 
-Note: Currently I am using a private external api endpoint locally of which I do not have permission to publicize here. I may just build an identical/similiar api for this and deploy it in a backend with the frontend later (e.g. on Heroku).
+4. Access the app in any web browser via localhost:3000.
 
-Until then, you'll need to create your own api server to supply questions & answers to the client.
+<br/>
 
-5. Deploy the app on a [local web server](https://webpack.js.org/configuration/dev-server/) in development mode.
+## How to Deploy the App
+
+1. In the root directory (/tree-match), ensure you're on the deployment branch.
+
+```
+git checkout deployment
+```
+
+2. Run the build script.
+
+```
+npm run build
+```
+
+3. Run the deploy script.
 
 ```
 npm start
 ```
 
-## How to Run the App
+4. Access the app in any web browser via localhost:5000
 
-1. Enter localhost:3000 into the url bar of any web-browser.
+<br/>
 
 ## How to Test the App
 
-Start the Jest test runner in watch mode.
+Test the frontend:
 
 ```
+cd client
+npm test
+```
+
+Test the backend:
+
+```
+cd ../server
 npm test
 ```
