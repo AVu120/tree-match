@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "if [$NODE_ENV == 'production']; then node ./bin/www; else nodemon ./bin/www; fi",
+    "start": "node ./bin/www;",
     "test": "jest"
   },
   "dependencies": {
@@ -13,7 +13,6 @@
     "http-errors": "~1.8.0",
     "jade": "~1.11.0",
     "morgan": "~1.10.0",
-    "nodemon": "^2.0.7",
     "typescript": "^4.2.3"
   },
   "devDependencies": {

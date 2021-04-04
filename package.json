@@ -4,8 +4,8 @@
   "description": "Helps you decide what type of tree to plant.",
   "main": "index.js",
   "scripts": {
-    "build": "cd client && npm i && npm run build",
-    "start": "cd server && npm i && npm start"
+    "build": "cd client && npm i && npm run build && cd ../server && npm i",
+    "start": "npm start"
   },
   "repository": {
     "type": "git",
