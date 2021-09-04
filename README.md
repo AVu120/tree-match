@@ -2,8 +2,6 @@
 
 A service that tells you what kind of tree you should plant in your garden! It guides users through a questionnaire and matches them with a tree species.
 
-Click [here](https://tree-match.herokuapp.com/) to play with a demo of the app.
-
 ![image](https://user-images.githubusercontent.com/38395166/106522015-2eedb580-6533-11eb-81f9-dcffde5d2910.png)
 
 ![image](https://user-images.githubusercontent.com/38395166/106522145-58a6dc80-6533-11eb-9a1e-bed394903e98.png)
@@ -11,7 +9,8 @@ Click [here](https://tree-match.herokuapp.com/) to play with a demo of the app.
 ![image](https://user-images.githubusercontent.com/38395166/106522196-6b211600-6533-11eb-81ae-476ada02525d.png)
 
 ![image](https://user-images.githubusercontent.com/38395166/106522240-7f651300-6533-11eb-8fa5-9ff1c8a15ef7.png)
-<br/>
+
+Play with this app at https://tree-match.herokuapp.com/.
 
 ## Table of Contents
 
